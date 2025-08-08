@@ -1,0 +1,105 @@
+/* src/pages/Login.css */
+
+/* 1. Light page background for contrast */
+.login-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem;
+  background-color: #f0f4f8;
+  background-image: linear-gradient(135deg, #e6e9f0 0%, #eef1f5 100%);
+}
+
+/* 2. The login card - NOW SOLID BLACK */
+.login-card {
+  width: 100%;
+  max-width: 420px;
+  
+  /* A solid, dark charcoal background */
+  background: #18181b;
+  
+  /* A slightly lighter border to define the edge */
+  border: 1px solid #27272a;
+  
+  border-radius: 1rem;
+  padding: 2.5rem;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+}
+
+/* 3. Header and form styling for the dark card */
+.login-header {
+  text-align: center;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #ffffff; /* Permanently white text */
+  margin-bottom: 2rem;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #a1a1aa; /* A lighter gray for labels */
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  color: #e4e4e7;
+  background-color: #27272a;
+  border: 1px solid #3f3f46;
+  transition: all 0.2s ease-in-out;
+}
+.form-input::placeholder { color: #71717a; }
+.form-input:focus {
+  outline: none;
+  border-color: #7c3aed;
+  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.4);
+}
+
+.test-creds {
+  background-color: #27272a;
+  border: 1px solid #3f3f46;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #a1a1aa;
+}
+.test-creds strong {
+  color: #e4e4e7;
+}
+
+/* NOTE: The entire hover effect section has been removed as requested.
+*/
+
+/* Login button styles */
+.login-btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(to right, #4f46e5, #7c3aed);
+  color: white;
+  padding: 0.75rem 1.25rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 4px 14px 0 rgba(0, 118, 255, 0.39);
+  transition: all 0.3s ease;
+}
+.login-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px 0 rgba(0, 118, 255, 0.23);
+}
+.login-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

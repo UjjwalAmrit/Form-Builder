@@ -1,0 +1,131 @@
+/* src/components/Navbar.css */
+
+/* Main navbar container - NOW FULL WIDTH */
+.navbar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 50;
+
+  /* CHANGE: Increased opacity from 0.8 to 0.95 */
+  background: rgba(46, 16, 101, 0.95); 
+
+  /* CHANGE: Increased blur for better legibility */
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.75rem 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* This class now centers the content within the full-width bar */
+.navbar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px; /* Keeps content from spreading too wide */
+  margin: 0 auto;
+}
+
+/* Styling for the brand/logo */
+.navbar-brand {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar-brand:hover {
+  color: #d8b4fe;
+}
+
+/* Container for the navigation links and user info */
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/* Styling for individual navigation links */
+.nav-link {
+  color: #e9d5ff;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 0;
+  position: relative;
+  transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nav-link:hover {
+  color: #ffffff;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #c084fc;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Styling for the user info display */
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #e9d5ff;
+  cursor: default;
+}
+.user-info:hover::after {
+  width: 0;
+}
+
+
+/* src/components/Navbar.css */
+
+/* === Stylish Button Enhancement for "Logout" === */
+.logout-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  /* New gradient for a distinct look */
+  background: linear-gradient(to right, #be185d, #ec4899);
+  color: #ffffff;
+  border: none; /* Removed border for a cleaner look */
+  padding: 0.6rem 1.1rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 14px 0 rgba(236, 72, 153, 0.3);
+  /* Smoother transition for multiple properties */
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.logout-btn:hover {
+  /* Brighter gradient and pop effect on hover */
+  background: linear-gradient(to right, #db2777, #f472b6);
+  transform: scale(1.05) translateY(-1px);
+  box-shadow: 0 8px 25px 0 rgba(236, 72, 153, 0.25);
+}
+
+/* Icon animation on hover */
+.logout-btn svg {
+  transition: transform 0.3s ease;
+}
+.logout-btn:hover svg {
+  transform: rotate(15deg) scale(1.1);
+}
+/* ============================================== */

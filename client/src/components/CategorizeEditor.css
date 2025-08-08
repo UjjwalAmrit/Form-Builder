@@ -1,0 +1,110 @@
+/* src/components/CategorizeEditor.css */
+
+/* --- General Editor Styles --- */
+.editor-input-group {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.editor-add-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 0.75rem;
+  background-color: #8b5cf6; /* A consistent purple */
+  color: white;
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+.editor-add-btn:hover {
+  background-color: #7c3aed;
+}
+.editor-add-btn:disabled {
+  background-color: #585068;
+  cursor: not-allowed;
+}
+
+/* --- Category Section Styles --- */
+.category-pills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  min-height: 38px; /* Prevents layout shift when empty */
+}
+
+.category-pill {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #4c1d95; /* Darker purple */
+  color: #e9d5ff;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px; /* Makes it a pill shape */
+  font-size: 0.875rem;
+  font-weight: 500;
+  border: 1px solid #6d28d9;
+}
+
+.pill-remove-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  color: #e9d5ff;
+  cursor: pointer;
+  padding: 0;
+  border-radius: 50%;
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+.pill-remove-btn:hover {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* --- Items Section Styles --- */
+.item-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  border-radius: 0.375rem;
+  margin-bottom: 0.5rem;
+  background-color: rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.item-text {
+  flex: 1; /* Takes up available space */
+  color: #d1d5db;
+}
+
+.item-category-select {
+  width: 160px; /* A fixed width for the dropdown */
+  background-color: #3730a3; /* Indigo */
+  color: #e0e7ff;
+  border: 1px solid #4f46e5;
+  border-radius: 0.375rem;
+  padding: 0.4rem 0.6rem;
+  font-size: 0.875rem;
+}
+
+.item-remove-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #9f1239; /* Dark red */
+  color: #fce7f3;
+  border: none;
+  border-radius: 0.375rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.item-remove-btn:hover {
+  background-color: #be185d; /* Brighter pink/red */
+}

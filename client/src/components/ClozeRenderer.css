@@ -1,0 +1,112 @@
+/* src/components/ClozeRenderer.css */
+
+.cloze-renderer {
+  font-family: inherit;
+}
+
+/* The main container for the passage text and blanks */
+.cloze-passage {
+  font-size: 1.125rem; /* 18px */
+  line-height: 2; /* Double spacing for readability */
+  padding: 1.5rem;
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* The drop zone for a blank that expects a draggable option */
+.cloze-blank {
+  display: inline-block;
+  width: 120px; /* A fixed width for blanks */
+  height: 36px;
+  vertical-align: middle;
+  background-color: #eef2ff;
+  border: 1px dashed #a5b4fc;
+  border-radius: 0.375rem;
+  text-align: center;
+  margin: 0 0.25rem;
+  transition: all 0.2s ease;
+  color: #4338ca;
+  font-weight: 500;
+}
+
+/* Style for a blank when it has been filled */
+.cloze-blank.filled {
+  border: 1px solid #6366f1;
+  background-color: #e0e7ff;
+  cursor: pointer; /* Indicates it can be clicked to clear */
+}
+
+/* Visual feedback when dragging an option over a blank */
+.cloze-blank.drag-over {
+  border-style: solid;
+  transform: scale(1.05);
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.3);
+}
+
+/* The traditional input for non-drag-and-drop blanks */
+.blank-input {
+  display: inline-block;
+  width: 120px;
+  border: none;
+  border-bottom: 2px solid #6366f1;
+  background: transparent;
+  text-align: center;
+  font-size: 1.125rem;
+  font-family: inherit;
+  margin: 0 0.25rem;
+  padding: 0.25rem 0;
+}
+.blank-input:focus {
+  outline: none;
+  border-bottom-color: #4338ca;
+}
+
+/* The container for all draggable options */
+.word-bank {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #f3f4f6;
+  border-radius: 0.5rem;
+}
+
+.word-bank h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 0.75rem;
+}
+
+.word-bank-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+/* The style for each draggable "pill" in the word bank */
+.word-bank-option {
+  background-color: #ffffff;
+  border: 1px solid #d1d5db;
+  border-radius: 9999px; /* Pill shape */
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+  color: #1f2937;
+  cursor: grab;
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  transition: all 0.2s ease;
+}
+.word-bank-option:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+.word-bank-option.dragging {
+  opacity: 0.5;
+  cursor: grabbing;
+}
+
+.cloze-help-text {
+  margin-top: 1rem;
+  font-size: 0.875rem;
+  color: #6b7280;
+}

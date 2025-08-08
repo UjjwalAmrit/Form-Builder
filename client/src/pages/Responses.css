@@ -1,0 +1,136 @@
+/* src/pages/Responses.css */
+
+/* Main page container with a dark gradient background */
+.responses-page {
+  min-height: 100vh;
+  padding: 2rem;
+  background: #1e1b4b; /* Dark indigo/purple */
+  background-image: linear-gradient(145deg, #1e1b4b 0%, #312e81 100%);
+  color: #e5e7eb;
+}
+
+/* Header section for the form title and metadata */
+.responses-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.responses-header h1 {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.025em;
+}
+
+.responses-header p {
+  margin-top: 0.5rem;
+  font-size: 1.125rem;
+  color: #c7d2fe; /* Light indigo */
+}
+
+/* Glassmorphism card for each individual submission */
+.submission-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Container for all submission cards */
+.submissions-list {
+  display: grid;
+  gap: 2rem;
+}
+
+/* Metadata for each submission (number and timestamp) */
+.submission-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.submission-meta h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #f5f3ff;
+}
+
+.submission-meta span {
+  font-size: 0.875rem;
+  color: #a78bfa; /* Light violet */
+}
+
+/* Container for the list of answers within a submission */
+.answers-list {
+  display: grid;
+  gap: 1.5rem;
+}
+
+/* Styling for each individual question-answer block */
+.answer-container {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.answer-question-header {
+  margin-bottom: 0.75rem;
+}
+
+.answer-question-header h4 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+.answer-question-header span {
+  font-size: 0.75rem;
+  color: #9ca3af;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.answer-content {
+  padding-left: 1rem;
+  border-left: 2px solid #818cf8; /* Indigo border */
+  color: #d1d5db;
+  font-size: 0.95rem;
+}
+
+/* Specific styles for different answer types */
+.answer-content ul {
+  list-style-position: inside;
+  list-style-type: disc;
+  margin-top: 0.5rem;
+}
+
+.answer-content strong {
+  color: #c4b5fd; /* A highlight color for categories */
+}
+
+.answer-content .cloze-answer {
+  font-style: italic;
+  color: #e9d5ff; /* Light purple for cloze answers */
+}
+
+.answer-content .comprehension-sub-question {
+  margin-top: 0.5rem;
+}
+
+/* Fallback card for when no responses are found */
+.no-responses-card {
+  text-align: center;
+  padding: 2.5rem;
+}
+
+.no-responses-card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #ffffff;
+}

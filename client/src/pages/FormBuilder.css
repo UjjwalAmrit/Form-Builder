@@ -1,0 +1,211 @@
+/* src/pages/FormBuilder.css */
+
+/* Main page container with a consistent dark theme */
+.builder-page {
+  min-height: 100vh;
+  padding: 2rem;
+  background: #1e1b4b; /* A solid dark indigo/purple */
+  background-image: linear-gradient(145deg, #1e1b4b 0%, #312e81 100%);
+  color: #e5e7eb;
+}
+
+/* Page header */
+.builder-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.builder-header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+/* Glassmorphism card effect for main sections */
+.builder-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.builder-card > h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #f5f3ff;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Dark-theme form inputs */
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #c7d2fe;
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  background-color: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #e5e7eb;
+  transition: all 0.2s ease-in-out;
+}
+
+.form-control::placeholder {
+  color: #9ca3af;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: #a78bfa;
+  box-shadow: 0 0 0 3px rgba(167, 139, 250, 0.3);
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* Question card and sticky header styles */
+.questions-card-container {
+  display: flex;
+  flex-direction: column;
+  /* Set a max height so it knows when to start scrolling */
+  max-height: 70vh; 
+}
+
+.questions-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  /* Glassmorphism background to hide content scrolling underneath */
+  background: rgba(46, 27, 75, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+.questions-header h3 {
+ font-size: 1.25rem;
+ font-weight: 600;
+ color: #f5f3ff;
+}
+
+/* "Add Question" button group */
+.add-question-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.add-question-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.08);
+  color: #e5e7eb;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid transparent;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  font-size: 0.875rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.add-question-btn:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+}
+
+/* The scrollable area for the list of questions */
+.questions-list {
+  overflow-y: auto; /* Allows vertical scrolling */
+  padding-right: 1rem; /* Adds space for the scrollbar */
+}
+
+/* Container for each question editor */
+.question-editor-card {
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.question-editor-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.question-editor-header h4 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #e9d5ff;
+}
+
+/* Save and Delete button styles */
+.save-form-btn, .delete-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: white;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.save-form-btn {
+  background: linear-gradient(to right, #8b5cf6, #c084fc);
+  box-shadow: 0 4px 14px 0 rgba(192, 132, 252, 0.3);
+}
+.save-form-btn:hover:not(:disabled) {
+  transform: scale(1.05) translateY(-2px);
+  box-shadow: 0 8px 25px 0 rgba(192, 132, 252, 0.25);
+}
+.save-form-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.delete-btn {
+  background: linear-gradient(to right, #be185d, #ec4899);
+  padding: 0.5rem 1rem;
+  box-shadow: 0 4px 12px 0 rgba(236, 72, 153, 0.3);
+}
+.delete-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px 0 rgba(236, 72, 153, 0.25);
+}
+
+.no-questions-message {
+  text-align: center;
+  padding: 2.5rem 1.25rem;
+  color: #9ca3af;
+}
